@@ -1,13 +1,13 @@
 from django.contrib import admin
-from django.contrib import admin
-# из файла models импортируем модель Post
-from .models import Post, Group
+
+from .models import Group, Post
+
 
 class PostAdmin(admin.ModelAdmin):
     list_display = ('text', 'pub_date', 'author')
     search_fields = ('text',)
     list_filter = ('pub_date',)
-    empty_value_display =('-пусто-') 
+    empty_value_display = ('-пусто-')
 
 
 class GroupAdmin(admin.ModelAdmin):
